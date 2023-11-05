@@ -2,44 +2,37 @@
 import Icon from './Icon.astro';
 ---
 
-<section class="box skills">
+<section class="box education">
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Lycée Français de Moscou</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
+		<p>Cursus de Bac général dans le Lycée Francais Alexandre Dumas à Moscou avec l'obtention du baccalauréat général avec mention bien avec les spécialités Mathématiques, Physique-Chime et Sciences et Vie de la Terre.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<Icon icon="engineer_cse" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Polytech Tours</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+		<p>Cursus d'ingénieur en spécialité informatique dans l'école Polytechnique de l'université de Tours.</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Full Stack</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+		<p>Aspiration après l'obtention du diplôme d'ingénieur</p>
 	</div>
 </section>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
 
-	.skills {
+	.education {
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
 	}
 
-	.skills h2 {
+	.education h2 {
 		font-size: var(--text-lg);
 	}
 
-	.skills p {
+	.education p {
 		color: var(--gray-400);
 	}
 
@@ -49,13 +42,13 @@ import Icon from './Icon.astro';
 			padding: 2.5rem;
 		}
 
-		.skills {
+		.education {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+			grid-template-columns: repeat(1, 3fr);
+			gap: 3rem;
 		}
 
-		.skills h2 {
+		.education h2 {
 			font-size: var(--text-2xl);
 		}
 	}

@@ -22,15 +22,16 @@ const { align = 'center', tagline, title } = Astro.props;
 		text-align: center;
 	}
 
-	.title,
 	.tagline {
 		max-width: 37ch;
 		margin-inline: auto;
+		text-align: center;
 	}
 
 	.title {
 		font-size: var(--text-3xl);
 		color: var(--gray-0);
+		text-align: center;
 	}
 
 	@media (min-width: 50em) {
