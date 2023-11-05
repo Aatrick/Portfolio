@@ -12,23 +12,34 @@ const projects = (await getCollection('work')).sort(
 ---
 
 <BaseLayout
-	title="Éxperiences | Aatricks"
+    title="Éxperiences | Aatricks"
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Mes projets"
-				align="start"
-			/>
-			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
-	</div>
+    <div class="stack gap-20" style="height: 100vh; overflow: hidden;">
+        <main class="wrapper stack gap-8" style="height: 100vh;">
+            <Hero
+                title="Mes projets"
+                align="start"
+            />
+            <Grid variant="offset" style="height: 100vh;">
+                <li>
+                    <PortfolioPreview project={projects[0]} image="/assets/julia.png" />
+                </li>
+                <li>
+                    <PortfolioPreview project={projects[1]} image="/assets/julia.gif" />
+                </li>
+                <li>
+                    <PortfolioPreview project={projects[2]} image="/assets/julia2.gif" />
+                </li>
+                <!--
+                {
+                    projects.slice(2).map((project) => (
+                        <li>
+                            <PortfolioPreview project={project} />
+                        </li>
+                    ))
+                }
+                -->
+            </Grid>
+        </main>
+    </div>
 </BaseLayout>
