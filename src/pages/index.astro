@@ -27,11 +27,12 @@ const projects = (await getCollection('work'))
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero" style="padding-left:400px">
+			<header class="hero">
 				<Hero
-					title="Salut ! 👋 Je suis Aatricks"
-					tagline="Developpeur de passion et de travail."
-					align="start">
+				title='Salut ! 👋'
+				title2='Je suis Aatricks'
+				tagline="Developpeur de passion et de travail."
+				align="start">
 					<div class="roles">
 						<Pill><Icon icon="code" size="1.33em" /> Développeur</Pill>
 						<Pill><img width="20" height="20" src="/assets/engineer.png"/>Ingénieur</Pill>
@@ -77,10 +78,13 @@ const projects = (await getCollection('work'))
 
 <style>
 	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	overflow: auto;
+    gap: 2rem;
 	}
 
 	.roles {
@@ -90,9 +94,6 @@ const projects = (await getCollection('work'))
 	@media (min-width: 50em) {
 		.hero {
 			display: grid;
-			grid-template-columns: 6fr 4fr;
-			padding-inline: 2.5rem;
-			gap: 3.75rem;
 		}
 
 		.roles {
@@ -154,6 +155,7 @@ const projects = (await getCollection('work'))
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
 			gap: 5rem;
+			
 		}
 
 		.section.with-cta {

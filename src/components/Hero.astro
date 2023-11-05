@@ -1,55 +1,59 @@
 ---
 interface Props {
 	title: string;
+    title2: string;
 	tagline?: string;
 	align?: 'start' | 'center';
 }
 
-const { align = 'center', tagline, title } = Astro.props;
+const { align = 'center', tagline, title, title2 } = Astro.props;
 ---
 
 <div class:list={['hero stack gap-4', align]}>
-	<div class="stack gap-2">
-		<h1 class="title">{title}</h1>
+    <div class="stack gap-2">
+        <h1 class="title">{title}</h1>
+        <h1 class="title">{title2}</h1>
 		{tagline && <p class="tagline">{tagline}</p>}
 	</div>
 	<slot />
 </div>
 
 <style>
-	.hero {
-		font-size: var(--text-lg);
-		text-align: center;
-	}
-
+    .hero {
+        font-size: var(--text-lg);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 	.tagline {
-		max-width: 37ch;
-		margin-inline: auto;
-		text-align: center;
-	}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-	.title {
-		font-size: var(--text-3xl);
-		color: var(--gray-0);
-		text-align: center;
-	}
+    .title {
+        font-size: var(--text-3xl);
+        color: var(--gray-0);
+        text-align: center;
+    }
 
-	@media (min-width: 50em) {
-		.hero {
-			font-size: var(--text-xl);
-		}
+    @media (min-width: 50em) {
+        .hero {
+            font-size: var(--text-xl);
+        }
 
-		.start {
-			text-align: start;
-		}
+        .start {
+            text-align: start;
+        }
 
-		.start .title,
-		.start .tagline {
-			margin-inline: unset;
-		}
+        .start .title,
+        .start .tagline {
+            margin-inline: unset;
+        }
 
-		.title {
-			font-size: var(--text-5xl);
-		}
-	}
+        .title {
+            font-size: var(--text-5xl);
+        }
+    }
 </style>

@@ -117,16 +117,16 @@
 
 html,
 body {
-	height: 100%;
-	overflow-x: hidden;
-}
-
-body {
 	background-color: var(--gray-999);
 	color: var(--gray-200);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
+	overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 *,
@@ -134,11 +134,6 @@ body {
 *::before {
 	box-sizing: border-box;
 	margin: 0;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
 }
 
 a {
