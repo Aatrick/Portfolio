@@ -60,14 +60,23 @@ const projects = (await getCollection('work'))
 				</header>
 
 				<div class="gallery">
+					
 					<Grid variant="offset">
+						<li>
+							<PortfolioPreview project={projects[0]} image="/assets/julia.png" />
+						</li>
+						<li>
+							<PortfolioPreview project={projects[1]} image="/assets/julia.gif" />
+						</li>
+						<!--
 						{
-							projects.map((project) => (
+							projects.slice(2).map((project) => (
 								<li>
 									<PortfolioPreview project={project} />
 								</li>
 							))
 						}
+						-->
 					</Grid>
 				</div>
 			</section>
