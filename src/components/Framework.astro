@@ -1,34 +1,24 @@
-<script>
-    const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            let number = entry.target.querySelector('.number');
-            let counter = 0;
-            const intervalId = setInterval(() => {
-                if (counter == 65) {
-                    clearInterval(intervalId);
-                } else {
-                    counter += 1;
-                    number.innerHTML = `${counter}%`;
-                }
-            }, 30);
-        }
-    });
-}, { threshold: 0.1 });
-
-Array.from(document.querySelectorAll('.language')).forEach((language) => {
-    observer.observe(language);
-});
-</script>
-
-<section class="box languages">
-    {Array.from({ length: 5 }).map((_, index) => {
-        let images = ["assets/svelte.png", "assets/laravel.png", "assets/astro.png", "assets/tailwindcss.png", "assets/postgresql.png"];
-        return (
+<section class="box framework">
+        <div class="stack gap-2 lg:gap-4">
+            <div class="outer">
+                <div class="inner">
+                    <img id={`image-astro`} src="assets/astro.png" alt="Description" class="image">
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                    <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#DA22FF" />
+                        <stop offset="100%" stop-color="#9733EE" />
+                    </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circleas"/>
+            </svg>
+        </div>
             <div class="stack gap-2 lg:gap-4">
                 <div class="outer">
                     <div class="inner">
-                        <img id={`image-${index}`} src={images[index]} alt="Description" class="image">
+                        <img id={`image-svelte`} src="assets/svelte.png" alt="Description" class="image">
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -38,24 +28,72 @@ Array.from(document.querySelectorAll('.language')).forEach((language) => {
                             <stop offset="100%" stop-color="#9733EE" />
                         </linearGradient>
                     </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlesv"/>
                 </svg>
             </div>
-        );
-    })}
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-laravel`} src="assets/laravel.png" alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlela"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-TailWindCSS`} src="assets/tailwindcss.png" alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circleTW"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-PostGreSQL`} src="assets/postgresql.png" alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlePG"/>
+                </svg>
+            </div>
+
 </section>
 
 <style>
-    .languages {
+    .framework {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem; /* Decrease this value to reduce the gap */
     justify-items: center;
     align-items: center;
     height: 60vh;
-    padding: 3rem;
     box-sizing: border-box;
     overflow: auto;
+    max-width: 50%;
+    margin: auto;
     }
 
     .image {
@@ -70,11 +108,11 @@ Array.from(document.querySelectorAll('.language')).forEach((language) => {
 			padding: 2.5rem;
 		}
 
-		.languages {
+		.framework {
 			display: grid;
 			grid-template-columns: repeat(5, 1fr);
 			gap: 2rem;
-		}
+		}}
 
     .stack{
         width: 160px;
@@ -107,20 +145,81 @@ Array.from(document.querySelectorAll('.language')).forEach((language) => {
         font-size: 30px;
     }
 
-    circle{
+    .circlesv{
         fill: none;
         stroke: url(#GradientColor);
         stroke-width: 20px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: anim 2s linear forwards;
+        animation: animsv 2s linear forwards;
     }
 
-    @keyframes anim{
+    .circlela{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animla 2s linear forwards;
+    }
+
+    .circleas{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animas 2s linear forwards;
+    }
+
+    .circleTW{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animTW 2s linear forwards;
+    }
+
+    .circlePG{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animPG 2s linear forwards;
+    }
+
+    @keyframes animsv{
         100%{
-            stroke-dashoffset: 157.5;
+            stroke-dashoffset: 270;
         }
     }
+
+    @keyframes animla{
+        100%{
+            stroke-dashoffset: 270;
+        }
+    }
+
+    @keyframes animas{
+        100%{
+            stroke-dashoffset: 100;
+        }
+    }
+
+    @keyframes animTW{
+        100%{
+            stroke-dashoffset: 250;
+        }
+    }
+
+    @keyframes animPG{
+        100%{
+            stroke-dashoffset: 200;
+        }
+    }
+
 
     svg{
         position: absolute;

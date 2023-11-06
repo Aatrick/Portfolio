@@ -1,66 +1,98 @@
-<script>
-    const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            let number = entry.target.querySelector('.number');
-            let counter = 0;
-            const intervalId = setInterval(() => {
-                if (counter == 65) {
-                    clearInterval(intervalId);
-                } else {
-                    counter += 1;
-                    number.innerHTML = `${counter}%`;
-                }
-            }, 30);
-        }
-    });
-}, { threshold: 0.1 });
-
-Array.from(document.querySelectorAll('.language')).forEach((language) => {
-    observer.observe(language);
-});
-
-
-
-</script>
-
-
-
-<section class="box languages">
-    {Array.from({ length: 5 }).map((_, index) => {
-        let languages = ["FR : C2", "En : C1", "It : B2/C1", "Es : B2/C1", "Ru : B1"];
-        return (
-            <div class="stack gap-2 lg:gap-4">
-                <div class="outer">
-                    <div class="inner">
-                        {languages[index]}
-                    </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                        <linearGradient id="GradientColor">
-                            <stop offset="0%" stop-color="#DA22FF" />
-                            <stop offset="100%" stop-color="#9733EE" />
-                        </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-                </svg>
+<section class="box langues">
+    <div class="stack gap-2 lg:gap-4">
+        <div class="outer">
+            <div class="inner">
+                Fr <br> C2
             </div>
-        );
-    })}
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+                <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#DA22FF" />
+                    <stop offset="100%" stop-color="#9733EE" />
+                </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlefr"/>
+        </svg>
+    </div>
+    <div class="stack gap-2 lg:gap-4">
+        <div class="outer">
+            <div class="inner">
+                En <br> C1
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+                <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#DA22FF" />
+                    <stop offset="100%" stop-color="#9733EE" />
+                </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circleen"/>
+        </svg>
+    </div>
+    <div class="stack gap-2 lg:gap-4">
+        <div class="outer">
+            <div class="inner">
+                It <br> B2/C1
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+                <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#DA22FF" />
+                    <stop offset="100%" stop-color="#9733EE" />
+                </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circleit"/>
+        </svg>
+    </div>
+    <div class="stack gap-2 lg:gap-4">
+        <div class="outer">
+            <div class="inner">
+                Es <br> B2/C1
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+                <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#DA22FF" />
+                    <stop offset="100%" stop-color="#9733EE" />
+                </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlees"/>
+        </svg>
+    </div>
+    <div class="stack gap-2 lg:gap-4">
+        <div class="outer">
+            <div class="inner">
+                Ru <br> B1
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+                <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#DA22FF" />
+                    <stop offset="100%" stop-color="#9733EE" />
+                </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circleru"/>
+        </svg>
+    </div>
 </section>
 
 <style>
-    .languages {
+    .langues {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem; /* Decrease this value to reduce the gap */
     justify-items: center;
     align-items: center;
     height: 60vh;
-    padding: 3rem;
     box-sizing: border-box;
     overflow: auto;
+    max-width: 50%;
+    margin: auto;
     }
 
     .image {
@@ -75,17 +107,20 @@ Array.from(document.querySelectorAll('.language')).forEach((language) => {
 			padding: 2.5rem;
 		}
 
-		.languages {
-			display: grid;
+		.langues {
+			display: flex;
 			grid-template-columns: repeat(5, 1fr);
 			gap: 2rem;
-		}
+            justify-items: center;
+            align-items: center;
+
+		}}
 
     .stack{
         width: 160px;
         height: 160px;
         margin: 1rem;
-        position: relative;
+        position:relative;
     }
 
     .outer{
@@ -112,18 +147,78 @@ Array.from(document.querySelectorAll('.language')).forEach((language) => {
         font-size: 30px;
     }
 
-    circle{
+    .circlefr{
         fill: none;
         stroke: url(#GradientColor);
         stroke-width: 20px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: anim 2s linear forwards;
+        animation: animfr 2s linear forwards;
     }
 
-    @keyframes anim{
+    .circleen{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animen 2s linear forwards;
+    }
+
+    .circleit{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animit 2s linear forwards;
+    }
+
+    .circlees{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animes 2s linear forwards;
+    }
+
+    .circleru{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animru 2s linear forwards;
+    }
+
+    @keyframes animfr{
         100%{
-            stroke-dashoffset: 157.5;
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes animen{
+        100%{
+            stroke-dashoffset: 75;
+        }
+    }
+
+    @keyframes animit{
+        100%{
+            stroke-dashoffset: 140;
+        }
+    }
+
+    @keyframes animes{
+        100%{
+            stroke-dashoffset: 150;
+        }
+    }
+
+    @keyframes animru{
+        100%{
+            stroke-dashoffset: 250;
         }
     }
 

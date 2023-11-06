@@ -1,35 +1,9 @@
-<script>
-    const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            let number = entry.target.querySelector('.number');
-            let counter = 0;
-            let target = parseInt(number.textContent);
-            const intervalId = setInterval(() => {
-                if (counter == target) {
-                    clearInterval;
-                } else {
-                    counter += 1;
-                    number.innerHTML = `${counter}%`;
-                }
-            }, 30);
-        }
-    });
-}, { threshold: 0.1 });
-
-Array.from(document.querySelectorAll('.outer')).forEach((language) => {
-    observer.observe(language);
-});
-</script>
 
 <section class="box languages">
-    {Array.from({ length: 10 }).map((_, index) => {
-        let images = ["assets/Python.png", "assets/Rust.png", "assets/js.png", "assets/php.png", "assets/C.png", "assets/ts.png", "assets/html.png", "assets/css.png", "assets/SQL.png", "assets/github.png"];
-        return (
             <div class="stack gap-2 lg:gap-4">
                 <div class="outer">
                     <div class="inner">
-                        <img id={`image-${index}`} src={images[index]} alt="Description" class="image">
+                        <img id={`image-Python`} src={"assets/Python.png"} alt="Description" class="image">
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -39,11 +13,153 @@ Array.from(document.querySelectorAll('.outer')).forEach((language) => {
                             <stop offset="100%" stop-color="#9733EE" />
                         </linearGradient>
                     </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="cirlept"/>
                 </svg>
             </div>
-        );
-    })}
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-Rust`} src={"assets/Rust.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circler"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-JavaScript`} src={"assets/js.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlejs"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-php`} src={"assets/php.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circleph"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-C`} src={"assets/C.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlec"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-TypeScript`} src={"assets/ts.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlets"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-HTML`} src={"assets/html.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlehtml"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-CSS`} src={"assets/css.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlecss"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-SQL`} src={"assets/SQL.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlesql"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-GitHub`} src={"assets/github.png"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="circlegh"/>
+                </svg>
+            </div>
 </section>
 
 <style>
@@ -54,9 +170,10 @@ Array.from(document.querySelectorAll('.outer')).forEach((language) => {
     justify-items: center;
     align-items: center;
     height: 60vh;
-    padding: 3rem;
     box-sizing: border-box;
     overflow: auto;
+    max-width: 50%;
+    margin: auto;
     }
 
     .image {
@@ -75,7 +192,7 @@ Array.from(document.querySelectorAll('.outer')).forEach((language) => {
 			display: grid;
 			grid-template-columns: repeat(5, 1fr);
 			gap: 2rem;
-		}
+		}}
 
     .stack{
         width: 160px;
@@ -108,18 +225,154 @@ Array.from(document.querySelectorAll('.outer')).forEach((language) => {
         font-size: 30px;
     }
 
-    circle{
+    .circlept{
         fill: none;
         stroke: url(#GradientColor);
         stroke-width: 20px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: anim 2s linear forwards;
+        animation: animpt 2s linear forwards;
     }
 
-    @keyframes anim{
-        100%{
-            stroke-dashoffset: 157.5;
+    .circler{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animr 2s linear forwards;
+    }
+
+    .circlejs{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animjs 2s linear forwards;
+    }
+
+    .circleph{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animph 2s linear forwards;
+    }
+
+    .circlec{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animc 2s linear forwards;
+    }
+
+    .circlets{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animts 2s linear forwards;
+    }
+
+    .circlehtml{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animhtml 2s linear forwards;
+    }
+
+    .circlecss{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animcss 2s linear forwards;
+    }
+
+    .circlesql{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: animsql 2s linear forwards;
+    }
+
+    .circlegh{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation: animgh 2s linear forwards;
+    }
+
+
+    @keyframes animpt {
+    100% {
+        stroke-dashoffset: 50;
+    }
+    }
+
+    @keyframes animr {
+        100% {
+            stroke-dashoffset: 100;
+        }
+    }
+
+    @keyframes animjs {
+        100% {
+            stroke-dashoffset: 250;
+        }
+    }
+
+    @keyframes animph {
+        100% {
+            stroke-dashoffset: 150;
+        }
+    }
+
+    @keyframes animc {
+        100% {
+            stroke-dashoffset: 300;
+        }
+    }
+
+    @keyframes animts {
+        100% {
+            stroke-dashoffset: 320;
+        }
+    }
+
+    @keyframes animhtml {
+        100% {
+            stroke-dashoffset: 75;
+        }
+    }
+
+    @keyframes animcss {
+        100% {
+            stroke-dashoffset: 75;
+        }
+    }
+
+    @keyframes animsql {
+        100% {
+            stroke-dashoffset: 170;
+        }
+    }
+
+    @keyframes animgh {
+        100% {
+            stroke-dashoffset: 170;
         }
     }
 
