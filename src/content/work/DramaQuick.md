@@ -14,7 +14,7 @@ tags:
 
 ## DramaQuick
 
-> What is it ?
+> Que-ce que c'est ?
 
 [DramaQuick](https://github.com/Dramaquick/DramaQuick) est une version de DramaQuiz accélérée ; des questionnaires temporaires, des sessions de quiz... Tout cela a été créé avec une idée : l’éphémérité !
 
