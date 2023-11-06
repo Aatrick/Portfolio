@@ -126,7 +126,17 @@ body {
 }
 
 body::-webkit-scrollbar {
-    display: none;
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+	background: purple;
+	border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--accent-regular);
+	border-radius: 10px;
 }
 
 *,
