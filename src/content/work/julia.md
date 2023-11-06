@@ -11,19 +11,19 @@ tags:
   - Math
 ---
 
-## Level-two heading
+## algorithm
 
 > HOW DOES IT WORK
 
-The julia_set function works by creating a 2D array of size x_res*y_res, and then filling it with the iteration ratio of each pixel (the number of iterations it took to reach the max_iter value) and then plotting it using imshow from matplotlib (the iteration ratio is used to determine the color of each pixel).
+The [julia_set](https://github.com/Aatrick/Julia_Set/tree/main) function works by creating a 2D array of size x_res*y_res, and then filling it with the iteration ratio of each pixel (the number of iterations it took to reach the max_iter value) and then plotting it using imshow from matplotlib (the iteration ratio is used to determine the color of each pixel).
 
 The generator works with all types of resolutions although it is recommended to use even and similar numbers for x_res and y_res.
 
-### Level-three heading
+### Console
 
 The julia.py file is completely callable from a Powershell terminal and will ask, how you want it to behave.
 
-### Level-three heading
+### GIFs
 
 Other than simply plotting images and saving them, the generator is also able to generate GIFs, there are two modes for now, one zooming progressively into one part of the fractal 
 
