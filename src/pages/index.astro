@@ -11,6 +11,7 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Presentation from '../components/presentation.astro';
+import languages from '../components/languages.astro';
 
 // Page section components
 import Skills from '../components/Education.astro';
@@ -48,11 +49,12 @@ const projects = (await getCollection('work'))
 			<br/>
 			<br/>
 			<br/>
-			<Skills />
+			<Skills/>
 		</div>
 		<br/>
 		<br/>
 		<br/>
+		<languages/>
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
