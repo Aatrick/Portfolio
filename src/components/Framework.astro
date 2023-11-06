@@ -91,8 +91,6 @@
     align-items: center;
     height: 60vh;
     box-sizing: border-box;
-    overflow: auto;
-    max-width: 50%;
     margin: auto;
     }
 
@@ -113,7 +111,25 @@
 			grid-template-columns: repeat(5, 1fr);
 			gap: 2rem;
 		}}
-
+    
+    @media (max-width: 1200px) {
+        .framework {
+        grid-template-columns: repeat(4, 2fr);
+        margin-bottom: 10vh;
+        }
+    }
+    @media (max-width: 1000px) {
+        .framework {
+        grid-template-columns: repeat(3, 3fr);
+        margin-bottom: 20vh;
+        }
+    }
+    @media (max-width: 800px) {
+        .framework {
+        grid-template-columns: repeat(2, 4fr);
+        margin-bottom: 30vh;
+        }
+    }
     .stack{
         width: 160px;
         height: 160px;
