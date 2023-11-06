@@ -11,10 +11,12 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Presentation from '../components/presentation.astro';
-import languages from '../components/languages.astro';
+import Languages from '../components/languages.astro';
 
 // Page section components
 import Skills from '../components/Education.astro';
+import Framework from '../components/Framework.astro';
+import Langues from '../components/Langues.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -51,7 +53,21 @@ const projects = (await getCollection('work'))
 			<br/>
 			<Skills/>
 		</div>
-		<languages/>
+		<div class="langues-header">
+			<Icon icon="translate" color="var(--accent-regular)" size="2.5rem" gradient />
+			<h2>Langues :</h2>
+		</div>
+		<Langues/>
+		<div class="langues-header">
+			<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+			<h2>Languages :</h2>
+		</div>
+		<Languages/>
+		<div class="langues-header">
+			<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+			<h2>Framework :</h2>
+		</div>
+		<Framework/>
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -115,6 +131,13 @@ const projects = (await getCollection('work'))
 			display: flex;
 			gap: 0.5rem;
 		}
+	}
+
+	.langues-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Adjust this value to change the space between the icon and the text */
 	}
 
 	/* ====================================================== */

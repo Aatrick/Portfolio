@@ -4,10 +4,9 @@
         if (entry.isIntersecting) {
             let number = entry.target.querySelector('.number');
             let counter = 0;
-            let target = parseInt(number.textContent);
             const intervalId = setInterval(() => {
-                if (counter == target) {
-                    clearInterval;
+                if (counter == 65) {
+                    clearInterval(intervalId);
                 } else {
                     counter += 1;
                     number.innerHTML = `${counter}%`;
@@ -17,19 +16,24 @@
     });
 }, { threshold: 0.1 });
 
-Array.from(document.querySelectorAll('.outer')).forEach((language) => {
+Array.from(document.querySelectorAll('.language')).forEach((language) => {
     observer.observe(language);
 });
+
+
+
 </script>
 
+
+
 <section class="box languages">
-    {Array.from({ length: 10 }).map((_, index) => {
-        let images = ["assets/Python.png", "assets/Rust.png", "assets/js.png", "assets/php.png", "assets/C.png", "assets/ts.png", "assets/html.png", "assets/css.png", "assets/SQL.png", "assets/github.png"];
+    {Array.from({ length: 5 }).map((_, index) => {
+        let languages = ["FR : C2", "En : C1", "It : B2/C1", "Es : B2/C1", "Ru : B1"];
         return (
             <div class="stack gap-2 lg:gap-4">
                 <div class="outer">
                     <div class="inner">
-                        <img id={`image-${index}`} src={images[index]} alt="Description" class="image">
+                        {languages[index]}
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -60,8 +64,8 @@ Array.from(document.querySelectorAll('.outer')).forEach((language) => {
     }
 
     .image {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     }
 
