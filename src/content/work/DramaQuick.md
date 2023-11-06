@@ -16,16 +16,14 @@ tags:
 
 > What is it ?
 
-[DramaQuick](https://github.com/Dramaquick/DramaQuick) function works by creating a 2D array of size x_res*y_res, and then filling it with the iteration ratio of each pixel (the number of iterations it took to reach the max_iter value) and then plotting it using imshow from matplotlib (the iteration ratio is used to determine the color of each pixel).
+[DramaQuick](https://github.com/Dramaquick/DramaQuick) est une version de DramaQuiz accélérée ; des questionnaires temporaires, des sessions de quiz... Tout cela a été créé avec une idée : l’éphémérité !
 
-The generator works with all types of resolutions although it is recommended to use even and similar numbers for x_res and y_res.
+### Quels sont les languages utilisés ?
 
-### Console
+Le site est fait en Svelte et TailwindCSS pour le style, le backend est fait en Laravel et la base de données en PostgreSQL.
 
-The julia.py file is completely callable from a Powershell terminal and will ask, how you want it to behave.
+### Résumé
 
-### GIFs
+Ce projet était un projet d’envergure, il nous a permis de découvrir et d’approfondir certaines parties d’une application web. Il nous a aussi révélé que certains outils basiques tel que html css ou encore php pouvait devenir très redondants pendant le développement et que des frameworks comme Svelte, Tailwindcss et Laravel permettent d’accélérer certaines parties mais que le projet était tel que, sans ces solutions, il nous aurait été impossible de le réalisé dans le délai imposé.
 
-Other than simply plotting images and saving them, the generator is also able to generate GIFs, there are two modes for now, one zooming progressively into one part of the fractal 
-
-And there's the second mode, making the c value fluctuate, to see how these changes impact the output.
+> Voici un lien à une explication plus détaillée de notre projet : [DramaQuick](https://cdn.discordapp.com/attachments/1016333891105214604/1101173336463122503/DramaQuick.docx?ex=65563a16&is=6543c516&hm=3ba5d199fdf4649f571f15da1ec1a25c2df061884db5a71403b38bede1ec8ed5&)
