@@ -131,7 +131,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-	background: purple;
+	background: rgb(9, 11, 16);
 	border-radius: 10px;
 }
 
