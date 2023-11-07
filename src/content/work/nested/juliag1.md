@@ -1,7 +1,7 @@
 ---
 title: Julia set / fractal generator
 publishDate: 2020-03-04 00:00:00
-img: /assets/julia.png
+img: /assets/julia.webp
 img_alt: complex number = -0.8 + 0.16i
 description: | 
   I developped in python and in rust a fractal generator based on the Julia Set.
