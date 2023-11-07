@@ -5,7 +5,7 @@ import Icon from './Icon.astro';
 <section class="box presentation">
     <div class="stack gap-2 lg:gap-4">
         <Icon icon="pencil-line" color="var(--accent-regular)" size="2.5rem" gradient />
-        <h2>Petite Présentation</h2>
+        <h3>Petite Présentation</h3>
         <p>Je m'appelle <span class="highlight">Emilio Melis</span>, jeune développeur de 18 ans.<br/>
             J'adore coder des projets, construire des applications ou créer des algorithmes pour résoudre divers problèmes.<br/>
             Je suis principalement axé sur la <span class="highlight">création d'outils algorithmiques</span>.<br/>
@@ -15,7 +15,10 @@ import Icon from './Icon.astro';
 </section>
 
 <style>
-
+	.box {
+		height: 50vh;
+		overflow: auto;
+	}
 	.presentation {
 		display: flex;
 		flex-direction: column;
@@ -28,6 +31,7 @@ import Icon from './Icon.astro';
 
 	.presentation p {
 		color: var(--gray-400);
+		margin-left: 2em;
 	}
 
 	@media (min-width: 50em) {

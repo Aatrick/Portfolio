@@ -16,22 +16,25 @@ const projects = (await getCollection('work')).sort(
 >
     <div class="stack gap-20" style="height: 100vh; overflow: hidden;">
         <main class="wrapper stack gap-8" style="height: 100vh;">
-            <Hero
-                title="Mes projets"
-                align="start"
-            />
-            <Grid variant="offset" style="height: 100vh;">
+            <header class="title">
+				<Hero
+				title='Mes Projets'
+                title2=''
+				align="start">
+				</Hero>
+			</header>
+            <Grid variant="offset">
                 <li>
-                    <PortfolioPreview project={projects[0]} image="/assets/julia.png" />
+                    <PortfolioPreview project={projects[0]} image="/assets/julia.webp" />
                 </li>
                 <li>
-                    <PortfolioPreview project={projects[1]} image="/assets/julia.gif" />
+                    <PortfolioPreview project={projects[1]} image="/assets/julia (1).webp" />
                 </li>
                 <li>
-                    <PortfolioPreview project={projects[2]} image="/assets/julia2.gif" />
+                    <PortfolioPreview project={projects[2]} image="/assets/julia2.webp" />
                 </li>
 				<li>
-					<PortfolioPreview project={projects[3]} image="/assets/DramaQuick.png" />
+					<PortfolioPreview project={projects[3]} image="/assets/dramaquick.webp" />
 				</li>
                 <!--
                 {
@@ -46,3 +49,15 @@ const projects = (await getCollection('work')).sort(
         </main>
     </div>
 </BaseLayout>
+
+<style>
+    .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	overflow: auto;
+    gap: 2rem;
+	}
+</style>

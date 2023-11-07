@@ -3,6 +3,10 @@ import Icon from './Icon.astro';
 ---
 
 <section class="box education">
+	<div class="title-container">
+		<Icon icon="graduation-cap" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h3 class="Parcours">Parcours :</h3>
+	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Lycée Français de Moscou</h2>
@@ -21,6 +25,18 @@ import Icon from './Icon.astro';
 </section>
 
 <style>
+	.box {
+		margin-bottom: 30vh;
+	}
+
+	.title-container {
+	gap: 1rem;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+	/*align items horizontally in the center */
+	justify-content: center;
+	margin-bottom: 5vh;
+	}
 
 	.education {
 		display: flex;
@@ -34,6 +50,7 @@ import Icon from './Icon.astro';
 
 	.education p {
 		color: var(--gray-400);
+		margin-left: 2em;
 	}
 
 	@media (min-width: 50em) {

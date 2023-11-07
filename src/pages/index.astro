@@ -14,7 +14,7 @@ import Presentation from '../components/presentation.astro';
 import Languages from '../components/languages.astro';
 
 // Page section components
-import Skills from '../components/Education.astro';
+import Education from '../components/Education.astro';
 import Framework from '../components/Framework.astro';
 import Langues from '../components/Langues.astro';
 
@@ -51,7 +51,7 @@ const projects = (await getCollection('work'))
 			<br/>
 			<br/>
 			<br/>
-			<Skills/>
+			<Education/>
 			</div>
 			<div class="langues-header">
 				<Icon icon="translate" color="var(--accent-regular)" size="2.5rem" gradient />
@@ -68,36 +68,35 @@ const projects = (await getCollection('work'))
 				<h2>Framework :</h2>
 			</div>
 			<Framework/>
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mes projets</h3>
-				</header>
-
-				<div class="gallery">
+			<main class="wrapper stack gap-20 lg:gap-48">
+				<section class="section with-background with-cta">
+					<header class="section-header stack gap-2 lg:gap-4">
+						<h3>Mes projets</h3>
+					</header>
+					<div class="gallery">
 					
-					<Grid variant="offset">
-						<li>
-							<PortfolioPreview project={projects[0]} image="/assets/julia.webp" />
-						</li>
-						<li>
-							<PortfolioPreview project={projects[1]} image="/assets/julia (1).webp" />
-						</li>
-						<li>
-							<PortfolioPreview project={projects[2]} image="/assets/julia2.webp" />
-						</li>
-						<li>
-							<PortfolioPreview project={projects[3]} image="/assets/dramaquick.webp" />
-						</li>
-						<!--
-						{
-							projects.slice(2).map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-						-->
+						<Grid variant="offset">
+							<li>
+								<PortfolioPreview project={projects[0]} image="/assets/julia.webp" />
+							</li>
+							<li>
+								<PortfolioPreview project={projects[1]} image="/assets/julia (1).webp" />
+							</li>
+							<li>
+								<PortfolioPreview project={projects[2]} image="/assets/julia2.webp" />
+							</li>
+							<li>
+								<PortfolioPreview project={projects[3]} image="/assets/dramaquick.webp" />
+							</li>
+							<!--
+							{
+								projects.slice(2).map((project) => (
+									<li>
+										<PortfolioPreview project={project} />
+									</li>
+								))
+							}
+							-->
 					</Grid>
 				</div>
 			</section>
