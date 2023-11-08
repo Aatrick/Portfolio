@@ -52,11 +52,18 @@ const projects = (await getCollection('work')).sort(
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    height: 100vh;
 	}
+
+    .PortfolioPreview img {
+        display: block;
+        height: auto; /* Adjust this value as needed */
+        width: 100%;
+        height: 100%;
+    }
 
     .title h3{
         font-size: var(--text-2xl);
-        position: relative;
     }
 
     @media (max-width: 800px) {
@@ -67,13 +74,5 @@ const projects = (await getCollection('work')).sort(
     .title h3 {
         font-size: var(--text-xl); /* Adjust this value as needed */
     }
-    }
-
-    .wrapper {
-        position:relative;
-    }
-
-    .stack{
-        margin-bottom: 100px;
     }
 </style>
