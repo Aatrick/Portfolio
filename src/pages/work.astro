@@ -17,11 +17,7 @@ const projects = (await getCollection('work')).sort(
     <div class="stack gap-20" style="height: 100vh; overflow: hidden;">
         <main class="wrapper stack gap-8" style="height: 100vh;">
             <header class="title">
-				<Hero
-				title='Mes Projets'
-                title2=''
-				align="start">
-				</Hero>
+				<h3>Mes Projets</h3>
 			</header>
             <Grid variant="offset">
                 <li>
@@ -60,4 +56,31 @@ const projects = (await getCollection('work')).sort(
 	overflow: auto;
     gap: 2rem;
 	}
+
+    .title h3{
+        font-size: var(--text-2xl);
+        position: absolute;
+    }
+
+    @media (max-width: 800px) {
+    .title {
+        height: auto; /* Adjust this value as needed */
+    }
+
+    .title h3 {
+        font-size: var(--text-xl); /* Adjust this value as needed */
+    }
+    }
+
+    .wrapper {
+        height: fit-content;
+        position:absolute;
+    }
+
+    @media (max-width: 800px) {
+        .stack {
+            margin-bottom: 600px;
+        }
+    }
+
 </style>

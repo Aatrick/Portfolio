@@ -9,7 +9,7 @@ import Education from '../components/Education.astro';
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<header class="a-propos">
-				<Hero title="À propos" title2='' align='start'></Hero>
+				<h3>À Propos</h3>
 			</header>
 			<Presentation />
 			<Education />
@@ -26,5 +26,8 @@ import Education from '../components/Education.astro';
     height: 50vh;
 	overflow: auto;
     gap: 2rem;
+	}
+	.a-propos h3 {
+		font-size: var(--text-2xl);
 	}
 </style>
