@@ -30,7 +30,7 @@ const projects = (await getCollection('work'))
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
+			<header class="hero" style="min-height: 100vh; overflow: hidden;">
 				<Hero
 				title='Salut ! 👋'
 				title2='Je suis Aatricks'
@@ -117,19 +117,17 @@ const projects = (await getCollection('work'))
 	}
 
 	.roles {
-		display: none;
-	}
+			margin-top: 0.5rem;
+			display: flex;
+			gap: 0.5rem;
+		}
 
 	@media (min-width: 50em) {
 		.hero {
 			display: grid;
 		}
 
-		.roles {
-			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
-		}
+		
 	}
 
 	.langues-header {
