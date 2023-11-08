@@ -6,7 +6,7 @@ import Education from '../components/Education.astro';
 ---
 
 <BaseLayout title="A propos | Aatricks">
-	<div class="stack gap-20">
+	<div class="stack gap-20"	style="min-height: 100vh; overflow: hidden;">
 		<main class="wrapper about">
 			<header class="a-propos">
 				<h3>À Propos</h3>
@@ -26,6 +26,7 @@ import Education from '../components/Education.astro';
     height: 50vh;
 	overflow: auto;
     gap: 2rem;
+    min-height: 100vh;
 	}
 	.a-propos h3 {
 		font-size: var(--text-2xl);
