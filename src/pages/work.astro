@@ -52,14 +52,12 @@ const projects = (await getCollection('work')).sort(
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-	overflow: auto;
     gap: 2rem;
 	}
 
     .title h3{
         font-size: var(--text-2xl);
-        position: absolute;
+        position: relative;
     }
 
     @media (max-width: 800px) {
@@ -74,5 +72,15 @@ const projects = (await getCollection('work')).sort(
 
     .wrapper {
         position:relative;
+    }
+
+    .wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--header-height);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
     }
 </style>
