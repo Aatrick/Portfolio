@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
-import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 
 const projects = (await getCollection('work')).sort(
@@ -14,8 +13,8 @@ const projects = (await getCollection('work')).sort(
 <BaseLayout
     title="Éxperiences | Aatricks"
 >
-    <div class="stack gap-20" style="height: 100vh; overflow: hidden;">
-        <main class="wrapper stack gap-8" style="height: 100vh;">
+    <div class="stack gap-20" style="min-height: 100vh; overflow: hidden;">
+        <main class="wrapper stack gap-8">
             <header class="title">
 				<h3>Mes Projets</h3>
 			</header>
@@ -52,7 +51,7 @@ const projects = (await getCollection('work')).sort(
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    height: 100vh;
+    min-height: 100vh;
 	}
 
     .PortfolioPreview img {
