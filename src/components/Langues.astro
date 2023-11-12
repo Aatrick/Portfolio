@@ -1,3 +1,59 @@
+<script>
+    const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const circlefr = entry.target.querySelector('.circlefr');
+
+    if (entry.isIntersecting) {
+      circlefr.classList.add('animfr');
+	  return;
+    }
+    circlefr.classList.remove('animfr');
+  });
+
+  entries.forEach(entry => {
+    const circleen = entry.target.querySelector('.circleen');
+
+    if (entry.isIntersecting) {
+      circleen.classList.add('animen');
+	  return; 
+    }
+    circleen.classList.remove('animen');
+  });
+
+  entries.forEach(entry => {
+    const circleit = entry.target.querySelector('.circleit');
+
+    if (entry.isIntersecting) {
+      circleit.classList.add('animit');
+      return; 
+    }
+    circleit.classList.remove('animit');
+  });
+
+    entries.forEach(entry => {
+        const circlees = entry.target.querySelector('.circlees');
+    
+        if (entry.isIntersecting) {
+        circlees.classList.add('animes');
+        return; 
+        }
+        circlees.classList.remove('animes');
+    });
+
+    entries.forEach(entry => {
+        const circleru = entry.target.querySelector('.circleru');
+    
+        if (entry.isIntersecting) {
+        circleru.classList.add('animru');
+        return; 
+        }
+        circleru.classList.remove('animru');
+    });
+});
+
+observer.observe(document.querySelector('.langues'));
+</script>
+
 <section class="box langues">
     <div class="stack gap-2 lg:gap-4">
         <div class="outer">
@@ -157,7 +213,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animfr 2s linear forwards;
     }
 
     .circleen{
@@ -166,7 +221,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animen 2s linear forwards;
     }
 
     .circleit{
@@ -175,7 +229,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animit 2s linear forwards;
     }
 
     .circlees{
@@ -184,7 +237,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animes 2s linear forwards;
     }
 
     .circleru{
@@ -193,7 +245,26 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animru 2s linear forwards;
+    }
+
+    .animfr{
+        animation: animfr 1s linear forwards;
+    }
+
+    .animen{
+        animation: animen 1s linear forwards;
+    }
+
+    .animit{
+        animation: animit 1s linear forwards;
+    }
+
+    .animes{
+        animation: animes 1s linear forwards;
+    }
+
+    .animru{
+        animation: animru 1s linear forwards;
     }
 
     @keyframes animfr{

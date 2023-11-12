@@ -1,3 +1,59 @@
+<script>
+    const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const circlesv = entry.target.querySelector('.circlesv');
+
+    if (entry.isIntersecting) {
+      circlesv.classList.add('animsv');
+	  return;
+    }
+    circlesv.classList.remove('animsv');
+  });
+
+  entries.forEach(entry => {
+    const circlela = entry.target.querySelector('.circlela');
+
+    if (entry.isIntersecting) {
+      circlela.classList.add('animla');
+	  return; 
+    }
+    circlela.classList.remove('animla');
+  });
+
+    entries.forEach(entry => {
+        const circleas = entry.target.querySelector('.circleas');
+    
+        if (entry.isIntersecting) {
+        circleas.classList.add('animas');
+        return; 
+        }
+        circleas.classList.remove('animas');
+    });
+
+    entries.forEach(entry => {
+        const circleTW = entry.target.querySelector('.circleTW');
+    
+        if (entry.isIntersecting) {
+        circleTW.classList.add('animTW');
+        return; 
+        }
+        circleTW.classList.remove('animTW');
+    });
+
+    entries.forEach(entry => {
+        const circlePG = entry.target.querySelector('.circlePG');
+    
+        if (entry.isIntersecting) {
+        circlePG.classList.add('animPG');
+        return; 
+        }
+        circlePG.classList.remove('animPG');
+    });
+});
+
+observer.observe(document.querySelector('.framework'));
+</script>
+
 <section class="box framework">
         <div class="stack gap-2 lg:gap-4">
             <div class="outer">
@@ -159,7 +215,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animsv 2s linear forwards;
     }
 
     .circlela{
@@ -168,7 +223,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animla 2s linear forwards;
     }
 
     .circleas{
@@ -177,7 +231,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animas 2s linear forwards;
     }
 
     .circleTW{
@@ -186,7 +239,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animTW 2s linear forwards;
     }
 
     .circlePG{
@@ -195,7 +247,26 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animPG 2s linear forwards;
+    }
+
+    .animsv{
+        animation: animsv 1s linear forwards;
+    }
+
+    .animla{
+        animation: animla 1s linear forwards;
+    }
+
+    .animas{
+        animation: animas 1s linear forwards;
+    }
+
+    .animTW{
+        animation: animTW 1s linear forwards;
+    }
+
+    .animPG{
+        animation: animPG 1s linear forwards;
     }
 
     @keyframes animsv{

@@ -1,3 +1,109 @@
+<script>
+    const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const circlept = entry.target.querySelector('.circlept');
+
+    if (entry.isIntersecting) {
+      circlept.classList.add('animpt');
+	  return;
+    }
+    circlept.classList.remove('animpt');
+  });
+
+  entries.forEach(entry => {
+    const circler = entry.target.querySelector('.circler');
+
+    if (entry.isIntersecting) {
+      circler.classList.add('animr');
+	  return; 
+    }
+    circler.classList.remove('animr');
+  });
+
+    entries.forEach(entry => {
+        const circlejs = entry.target.querySelector('.circlejs');
+    
+        if (entry.isIntersecting) {
+        circlejs.classList.add('animjs');
+        return; 
+        }
+        circlejs.classList.remove('animjs');
+    });
+
+    entries.forEach(entry => {
+        const circleph = entry.target.querySelector('.circleph');
+    
+        if (entry.isIntersecting) {
+        circleph.classList.add('animph');
+        return; 
+        }
+        circleph.classList.remove('animph');
+    });
+
+    entries.forEach(entry => {
+        const circlec = entry.target.querySelector('.circlec');
+    
+        if (entry.isIntersecting) {
+        circlec.classList.add('animc');
+        return; 
+        }
+        circlec.classList.remove('animc');
+    });
+
+    entries.forEach(entry => {
+        const circlets = entry.target.querySelector('.circlets');
+    
+        if (entry.isIntersecting) {
+        circlets.classList.add('animts');
+        return; 
+        }
+        circlets.classList.remove('animts');
+    });
+
+    entries.forEach(entry => {
+        const circlehtml = entry.target.querySelector('.circlehtml');
+    
+        if (entry.isIntersecting) {
+        circlehtml.classList.add('animhtml');
+        return; 
+        }
+        circlehtml.classList.remove('animhtml');
+    });
+
+    entries.forEach(entry => {
+        const circlecss = entry.target.querySelector('.circlecss');
+    
+        if (entry.isIntersecting) {
+        circlecss.classList.add('animcss');
+        return; 
+        }
+        circlecss.classList.remove('animcss');
+    });
+
+    entries.forEach(entry => {
+        const circlesql = entry.target.querySelector('.circlesql');
+    
+        if (entry.isIntersecting) {
+        circlesql.classList.add('animsql');
+        return; 
+        }
+        circlesql.classList.remove('animsql');
+    });
+
+    entries.forEach(entry => {
+        const circlegh = entry.target.querySelector('.circlegh');
+    
+        if (entry.isIntersecting) {
+        circlegh.classList.add('animgh');
+        return; 
+        }
+        circlegh.classList.remove('animgh');
+    });
+});
+
+observer.observe(document.querySelector('.languages'));
+</script>
+
 
 <section class="box languages">
             <div class="stack gap-2 lg:gap-4">
@@ -233,7 +339,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animpt 2s linear forwards;
     }
 
     .circler{
@@ -242,7 +347,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animr 2s linear forwards;
     }
 
     .circlejs{
@@ -251,7 +355,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animjs 2s linear forwards;
     }
 
     .circleph{
@@ -260,7 +363,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animph 2s linear forwards;
     }
 
     .circlec{
@@ -269,7 +371,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animc 2s linear forwards;
     }
 
     .circlets{
@@ -278,7 +379,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animts 2s linear forwards;
     }
 
     .circlehtml{
@@ -287,7 +387,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animhtml 2s linear forwards;
     }
 
     .circlecss{
@@ -296,7 +395,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animcss 2s linear forwards;
     }
 
     .circlesql{
@@ -305,7 +403,6 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animsql 2s linear forwards;
     }
 
     .circlegh{
@@ -314,7 +411,46 @@
         stroke-width: 18px;
         stroke-dasharray: 450;
         stroke-dashoffset: 450;
-        animation: animgh 2s linear forwards;
+    }
+
+    .animpt {
+        animation: animpt 1s linear forwards;
+    }
+
+    .animr {
+        animation: animr 1s linear forwards;
+    }
+
+    .animjs {
+        animation: animjs 1s linear forwards;
+    }
+
+    .animph {
+        animation: animph 1s linear forwards;
+    }
+
+    .animc {
+        animation: animc 1s linear forwards;
+    }
+
+    .animts {
+        animation: animts 1s linear forwards;
+    }
+
+    .animhtml {
+        animation: animhtml 1s linear forwards;
+    }
+
+    .animcss {
+        animation: animcss 1s linear forwards;
+    }
+
+    .animsql {
+        animation: animsql 1s linear forwards;
+    }
+
+    .animgh {
+        animation: animgh 1s linear forwards;
     }
 
 
