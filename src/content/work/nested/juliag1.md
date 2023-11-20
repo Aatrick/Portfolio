@@ -28,3 +28,5 @@ The julia.py file is completely callable from a Powershell terminal and will ask
 Other than simply plotting images and saving them, the generator is also able to generate GIFs, there are two modes for now, one zooming progressively into one part of the fractal 
 
 And there's the second mode, making the c value fluctuate, to see how these changes impact the output.
+
+> You can test it yourself by clicking [here](https://colab.research.google.com/drive/1D44ak_Lew7A464rzZLxoYOfrlf7BGRi5?usp=sharing)
