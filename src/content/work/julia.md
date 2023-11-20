@@ -29,4 +29,4 @@ Other than simply plotting images and saving them, the generator is also able to
 
 And there's the second mode, making the c value fluctuate, to see how these changes impact the output.
 
-> You can test it yourself by clicking [here](../../pages/python.astro)
+> You can test it yourself by clicking [here](../../Portfolio/python/)
