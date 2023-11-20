@@ -29,4 +29,4 @@ Other than simply plotting images and saving them, the generator is also able to
 
 And there's the second mode, making the c value fluctuate, to see how these changes impact the output.
 
-> You can test it yourself by clicking [here]
+> You can test it yourself by clicking [here](https://colab.research.google.com/drive/1D44ak_Lew7A464rzZLxoYOfrlf7BGRi5?usp=sharing)
