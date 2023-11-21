@@ -4,8 +4,7 @@ publishDate: 2019-12-01 00:00:00
 img: /Portfolio/assets/dramaquick.webp
 img_alt: A fast quizz website in between gartic phone and kahoot
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  We developped a fast quizz website in between gartic phone and kahoot made with Svelte, TailwindCSS and Laravel.
 tags:
   - Dev
   - Design
