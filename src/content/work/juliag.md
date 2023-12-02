@@ -16,5 +16,5 @@ tags:
 
 > WHAT IS IT ?
 
-The [Rust1111](https://github.com/Aatrick/Rust1111) is 
+The [Rust1111](https://github.com/Aatrick/Rust1111) is a work in progress version of stable diffusion webui in Rust. It is a windows application that can be used to generate images based on text (Txt2Img) using the stable diffusion algorithm. It is based on the fantastic work of Automatic1111 made in Python and of leejet made in C++.
 
