@@ -1,5 +1,5 @@
 ---
-title: Julia set / fractal generator
+title: Julia set / fractal-gif generator
 publishDate: 2020-03-04 00:00:00
 img: /Portfolio/assets/julia.webp
 img_alt: complex number = -0.8 + 0.16i
