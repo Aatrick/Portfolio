@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.2",
-    "astro": "^3.4.4"
+    "astro": "^3.4.4",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.5"
