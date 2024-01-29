@@ -7,12 +7,12 @@ interface Props {
 }
 
 const { project, image } = Astro.props;
-const { data, slug } = project;
+const { data, slug } = project ?? {};
 ---
 
 <a class="card" href={`/Portfolio/work/${slug}`}>
-    <span class="title">{data.title}</span>
-    <img src={image || data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+    <span class="title">{data?.title}</span>
+    <img src={image || data?.img} alt={data?.img_alt || ''} loading="lazy" decoding="async" />
 </a>
 
 <style>
