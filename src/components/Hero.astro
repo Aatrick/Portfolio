@@ -20,6 +20,24 @@ const { align = 'center', tagline, title, title2 } = Astro.props;
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
+//GSAP
+import { gsap } from "gsap";
+let tl = gsap.timeline({
+	scrollTrigger:{
+		trigger: ".hero",
+		start: "top top",
+		end: "bottom bottom",
+		scrub: false,
+		markers: true,
+		toggleActions: 'play reverse play reverse'
+	}
+})
+tl.from(".hero", {
+	duration: 3,
+	opacity: 0,
+	y: 100,
+	ease: "power4.out"
+})
   window.onload = function() {
     var typed = new Typed('#typed', {
       strings: ['Developpeur de passion', 'Developpeur de travail', "Ingenieur Polytech'"],
