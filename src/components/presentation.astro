@@ -3,31 +3,50 @@ import Icon from './Icon.astro';
 ---
 
 <script>
-import {gsap} from "gsap";
+import { gsap } from "gsap";
 
-    const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    const pres = entry.target.querySelector('.presentation');
+const observer = new IntersectionObserver(entries => {
+	entries.forEach(entry => {
+		const pres = entry.target.querySelector('.presentation');
 
-    if (entry.isIntersecting) {
-		let tl1 = gsap.timeline({
-				scrollTrigger:{
-					trigger: ".presentation",
-					start: "center 50%",
-					end: "bottom bottom",
-					scrub: false,
-					markers: true,
-					toggleActions: 'play reverse play reverse'
-				}
-			})
-			tl1.to(".presentation", {
-				x:1400,
-				duration: 1.5,
-				opacity: 1,
-			})
-    }
-  });
-
+		if (entry.isIntersecting) {
+			if ( window.innerWidth< 1500) {
+				// Script for small displays
+				let tl1 = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".presentation",
+						start: "center 50%",
+						end: "bottom bottom",
+						scrub: false,
+						markers: true,
+						toggleActions: 'play reverse play reverse'
+					}
+				});
+				tl1.to(".presentation", {
+					y: -100,
+					duration: 1.5,
+					opacity: 1,
+				});
+			} else {
+				// Script for big displays
+				let tl2 = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".presentation",
+						start: "center 50%",
+						end: "bottom bottom",
+						scrub: false,
+						markers: true,
+						toggleActions: 'play reverse play reverse'
+					}
+				});
+				tl2.to(".presentation", {
+					x: 1400,
+					duration: 1.5,
+					opacity: 1,
+				});
+			}
+		}
+	});
 });
 
 observer.observe(document.querySelector('.presentation'));
@@ -58,10 +77,13 @@ observer.observe(document.querySelector('.presentation'));
 		}
 	}
 	.presentation {
-		display: flex;
 		flex-direction: column;
 		gap: 3rem;
-	}
+		display: grid;
+		grid-template-columns: repeat(1, 3fr);
+		left: -1400px;
+		opacity: 0;
+		}
 
 	.presentation h2 {
 		font-size: var(--text-lg);
@@ -82,13 +104,6 @@ observer.observe(document.querySelector('.presentation'));
 			padding: 2.5rem;
 		}
 
-		.presentation {
-			display: grid;
-			grid-template-columns: repeat(1, 3fr);
-			gap: 3rem;
-			left: -1400px;
-		}
-
 		.presentation h2 {
 			font-size: var(--text-2xl);
 		}
@@ -96,6 +111,13 @@ observer.observe(document.querySelector('.presentation'));
         .highlight {
             color: purple;
         }
+	}
+
+	@media (max-width: 1500px) {
+		.presentation {
+			left:0px;
+		}
+		
 	}
 
     @media (max-width: 50em) {
