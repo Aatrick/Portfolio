@@ -112,6 +112,40 @@ const projects = (await getCollection('work'))
 	</div>
 </BaseLayout>
 
+<script>
+	//parallax
+	import {gsap} from 'gsap';
+	import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
+
+	const observer = new IntersectionObserver(entries => {
+	  entries.forEach(entry => {
+	    const pres = entry.target.querySelector('.gallery');
+
+	    if (entry.isIntersecting) {
+	        let tl1 = gsap.timeline({
+	                scrollTrigger:{
+	                    trigger: ".gallery",
+	                    start: "center 50%",
+	                    end: "bottom bottom",
+	                    scrub: false,
+	                    markers: true,
+	                    toggleActions: 'play reverse play reverse'
+	                }
+	            })
+	            tl1.to(".gallery", {
+	                duration:3,
+	                opacity:1,
+	                y: -100,
+	                ease: "power4.out"
+	            })
+	    }
+	  });
+	});
+	
+	observer.observe(document.querySelector('.gallery'));
+</script>
+
 <style>
 	.hero {
     display: flex;
@@ -217,6 +251,7 @@ const projects = (await getCollection('work'))
 
 		.gallery {
 			grid-area: gallery;
+			opacity: 0;
 		}
 
 		.cta {
