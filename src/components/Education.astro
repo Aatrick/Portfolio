@@ -2,6 +2,36 @@
 import Icon from './Icon.astro';
 ---
 
+<script>
+	import {gsap} from "gsap";
+	
+		const observer = new IntersectionObserver(entries => {
+	  entries.forEach(entry => {
+		const pres = entry.target.querySelector('.education');
+	
+		if (entry.isIntersecting) {
+			let tl1 = gsap.timeline({
+					scrollTrigger:{
+						trigger: ".education",
+						start: "center 50%",
+						end: "bottom bottom",
+						scrub: false,
+						markers: true,
+						toggleActions: 'play reverse play reverse'
+					}
+				})
+				tl1.to(".education", {
+					x:-1400,
+					duration: 1.5,
+					opacity: 1,
+				})
+		}
+	  });
+	});
+	
+	observer.observe(document.querySelector('.education'));
+	</script>
+
 <section class="box education">
 	<div class="title-container">
 		<Icon icon="graduation-cap" color="var(--accent-regular)" size="2.5rem" gradient />
@@ -43,6 +73,8 @@ import Icon from './Icon.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
+		left: 1400px;
+		opacity: 0;
 	}
 
 	.education h2 {

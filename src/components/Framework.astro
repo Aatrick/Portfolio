@@ -54,6 +54,37 @@
 observer.observe(document.querySelector('.framework'));
 </script>
 
+<script>
+    import {gsap} from "gsap";
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const pres = entry.target.querySelector('.framework');
+    
+        if (entry.isIntersecting) {
+            let tl1 = gsap.timeline({
+                    scrollTrigger:{
+                        trigger: ".framework",
+                        start: "center 50%",
+                        end: "bottom bottom",
+                        scrub: false,
+                        markers: true,
+                        toggleActions: 'play reverse play reverse'
+                    }
+                })
+                tl1.to(".framework", {
+                    duration:3,
+                    opacity:1,
+                    y: -100,
+                    ease: "power4.out"
+                })
+        }
+      });
+    });
+        
+    observer.observe(document.querySelector('.framework'));
+    </script>
+
 <section class="box framework">
         <div class="stack gap-2 lg:gap-4">
             <div class="outer">
@@ -114,6 +145,7 @@ observer.observe(document.querySelector('.framework'));
     grid-template-columns: repeat(5, 1fr);
     margin: auto;
     margin-bottom: 100vh;
+    opacity: 0;
     }
 
     .image {

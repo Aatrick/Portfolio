@@ -2,6 +2,37 @@
 import Icon from './Icon.astro';
 ---
 
+<script>
+import {gsap} from "gsap";
+
+    const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const pres = entry.target.querySelector('.presentation');
+
+    if (entry.isIntersecting) {
+		let tl1 = gsap.timeline({
+				scrollTrigger:{
+					trigger: ".presentation",
+					start: "center 50%",
+					end: "bottom bottom",
+					scrub: false,
+					markers: true,
+					toggleActions: 'play reverse play reverse'
+				}
+			})
+			tl1.to(".presentation", {
+				x:1400,
+				duration: 1.5,
+				opacity: 1,
+			})
+    }
+  });
+
+});
+
+observer.observe(document.querySelector('.presentation'));
+</script>
+
 <section class="box presentation">
     <div class="stack gap-2 lg:gap-4">
         <Icon icon="pencil-line" color="var(--accent-regular)" size="2.5rem" gradient />
@@ -18,6 +49,7 @@ import Icon from './Icon.astro';
 	.box {
 		height: 50vh;
 		position: relative;
+		opacity: 0;
 	}
 
 	@media (max-width: 800px) {
@@ -54,6 +86,7 @@ import Icon from './Icon.astro';
 			display: grid;
 			grid-template-columns: repeat(1, 3fr);
 			gap: 3rem;
+			left: -1400px;
 		}
 
 		.presentation h2 {

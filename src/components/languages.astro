@@ -104,6 +104,36 @@
 observer.observe(document.querySelector('.languages'));
 </script>
 
+<script>
+import {gsap} from "gsap";
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const pres = entry.target.querySelector('.languages');
+
+    if (entry.isIntersecting) {
+        let tl1 = gsap.timeline({
+                scrollTrigger:{
+                    trigger: ".languages",
+                    start: "center 50%",
+                    end: "bottom bottom",
+                    scrub: false,
+                    markers: true,
+                    toggleActions: 'play reverse play reverse'
+                }
+            })
+            tl1.to(".languages", {
+                duration:3,
+                opacity:1,
+                y: -100,
+                ease: "power4.out"
+            })
+    }
+  });
+});
+    
+observer.observe(document.querySelector('.languages'));
+</script>
 
 <section class="box languages">
             <div class="stack gap-2 lg:gap-4">
@@ -214,6 +244,7 @@ observer.observe(document.querySelector('.languages'));
     grid-template-columns: repeat(5, 1fr);
     margin: auto;
     margin-bottom: 40vh;
+    opacity: 0;
     }
 
     .image {
