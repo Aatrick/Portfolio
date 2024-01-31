@@ -48,11 +48,11 @@ const projects = (await getCollection('work'))
 				<script>
 					window.onload = function() {
 				    var typed = new Typed('#typed', {
-				      strings: ['Developpeur de passion', 'Developpeur de travail', "Ingenieur Polytech'"],
+				      strings: ['Developpeur de <strong>passion</strong>', 'Developpeur de <strong>travail</strong>', "<strong>Ingenieur Polytech'</strong>"],
 				      typeSpeed: 50,
 				      backSpeed: 30,
 				      loop: true,
-				      smartBackspace: false,
+				      smartBackspace: true,
 				    });
 				  };
 				</script>
@@ -124,10 +124,10 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <script>
-	//parallax
 	import {gsap} from 'gsap';
 	import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
+	
 
 	const observer = new IntersectionObserver(entries => {
 	  entries.forEach(entry => {
