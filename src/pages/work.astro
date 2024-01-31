@@ -15,9 +15,6 @@ const projects = (await getCollection('work')).sort(
 >
     <div class="stack gap-20" style="min-height: 100vh; overflow: hidden;">
         <main class="wrapper stack gap-8">
-            <header class="title">
-				<h3>Mes Projets</h3>
-			</header>
             <Grid variant="offset">
                 <li>
                     <PortfolioPreview project={projects[0]} image="/Portfolio/assets/SD1.webp" />
@@ -49,32 +46,8 @@ const projects = (await getCollection('work')).sort(
 </BaseLayout>
 
 <style>
-    .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    min-height: 100vh;
-	}
-
-    .PortfolioPreview img {
-        display: block;
-        height: auto; /* Adjust this value as needed */
-        width: 100%;
-        height: 100%;
-    }
-
-    .title h3{
-        font-size: var(--text-2xl);
-    }
-
-    @media (max-width: 800px) {
-    .title {
-        height: auto; /* Adjust this value as needed */
-    }
-
-    .title h3 {
-        font-size: var(--text-xl); /* Adjust this value as needed */
-    }
+    .wrapper{
+        justify-content: center;
+        align-items: center;
     }
 </style>
