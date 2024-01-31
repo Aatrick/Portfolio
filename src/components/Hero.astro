@@ -13,6 +13,7 @@ const { align = 'center', tagline, title, title2 } = Astro.props;
     <div class="stack gap-2">
         <h1 class="title">{title}</h1>
         <h1 class="title">{title2}</h1>
+        {tagline && <p class="tagline">{tagline}</p>}
 		<p><span id="typed"></span></p>
 	</div>
 	<slot />
@@ -38,15 +39,6 @@ tl.from(".hero", {
 	y: 100,
 	ease: "power4.out"
 })
-  window.onload = function() {
-    var typed = new Typed('#typed', {
-      strings: ['Developpeur de passion', 'Developpeur de travail', "Ingenieur Polytech'"],
-      typeSpeed: 50,
-      backSpeed: 30,
-      loop: true,
-      smartBackspace: false,
-    });
-  };
 </script>
 
 <style>

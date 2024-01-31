@@ -44,7 +44,18 @@ const projects = (await getCollection('work'))
 						</div>
 						</div>
 				</Hero>
-				
+				<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+				<script>
+					window.onload = function() {
+				    var typed = new Typed('#typed', {
+				      strings: ['Developpeur de passion', 'Developpeur de travail', "Ingenieur Polytech'"],
+				      typeSpeed: 50,
+				      backSpeed: 30,
+				      loop: true,
+				      smartBackspace: false,
+				    });
+				  };
+				</script>
 			</header>
 			<br/>
 			<br/>
