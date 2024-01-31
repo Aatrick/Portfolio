@@ -125,10 +125,6 @@ const projects = (await getCollection('work'))
 
 <script>
 	import {gsap} from 'gsap';
-	import {ScrollTrigger} from 'gsap/ScrollTrigger';
-
-	
-
 	const observer = new IntersectionObserver(entries => {
 	  entries.forEach(entry => {
 	    const pres = entry.target.querySelector('.gallery');
