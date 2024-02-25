@@ -99,6 +99,26 @@
         }
         circlegh.classList.remove('animgh');
     });
+
+    entries.forEach(entry => {
+        const circlek = entry.target.querySelector('.circlek');
+    
+        if (entry.isIntersecting) {
+        circlek.classList.add('animk');
+        return; 
+        }
+        circlek.classList.remove('animk');
+    });
+
+    entries.forEach(entry => {
+        const circlej = entry.target.querySelector('.circlej');
+    
+        if (entry.isIntersecting) {
+        circlej.classList.add('animj');
+        return; 
+        }
+        circlej.classList.remove('animj');
+    });
 });
 
 observer.observe(document.querySelector('.languages'));
@@ -236,6 +256,26 @@ observer.observe(document.querySelector('.languages'));
                     <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlegh"/>
                 </svg>
             </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-Kotlin`} src={"/Portfolio/assets/kotlin.webp"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
+                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlek"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-Java`} src={"/Portfolio/assets/java.webp"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
+                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlej"/>
+                </svg>
+            </div>
 </section>
 
 <style>
@@ -257,7 +297,7 @@ observer.observe(document.querySelector('.languages'));
 
 		.languages {
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(6, 1fr);
 			gap: 2rem;
 		}}
     
@@ -384,6 +424,22 @@ observer.observe(document.querySelector('.languages'));
         stroke-dashoffset: 450;
     }
 
+    .circlek{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 18px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+    }
+
+    .circlej{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 18px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+    }
+
     .animpt {
         animation: animpt 1s linear forwards;
     }
@@ -424,6 +480,14 @@ observer.observe(document.querySelector('.languages'));
         animation: animgh 1s linear forwards;
     }
 
+    .animk {
+        animation: animk 1s linear forwards;
+    }
+
+    .animj {
+        animation: animj 1s linear forwards;
+    }
+
 
     @keyframes animpt {
     100% {
@@ -451,7 +515,7 @@ observer.observe(document.querySelector('.languages'));
 
     @keyframes animc {
         100% {
-            stroke-dashoffset: 360;
+            stroke-dashoffset: 280;
         }
     }
 
@@ -482,6 +546,18 @@ observer.observe(document.querySelector('.languages'));
     @keyframes animgh {
         100% {
             stroke-dashoffset: 230;
+        }
+    }
+
+    @keyframes animk {
+        100% {
+            stroke-dashoffset: 300;
+        }
+    }
+
+    @keyframes animj {
+        100% {
+            stroke-dashoffset: 320;
         }
     }
 
