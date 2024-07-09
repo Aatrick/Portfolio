@@ -31,16 +31,6 @@
     });
 
     entries.forEach(entry => {
-        const circleph = entry.target.querySelector('.circleph');
-    
-        if (entry.isIntersecting) {
-        circleph.classList.add('animph');
-        return; 
-        }
-        circleph.classList.remove('animph');
-    });
-
-    entries.forEach(entry => {
         const circlec = entry.target.querySelector('.circlec');
     
         if (entry.isIntersecting) {
@@ -98,16 +88,6 @@
         return; 
         }
         circlegh.classList.remove('animgh');
-    });
-
-    entries.forEach(entry => {
-        const circlek = entry.target.querySelector('.circlek');
-    
-        if (entry.isIntersecting) {
-        circlek.classList.add('animk');
-        return; 
-        }
-        circlek.classList.remove('animk');
     });
 
     entries.forEach(entry => {
@@ -368,14 +348,6 @@ observer.observe(document.querySelector('.languages'));
         stroke-dashoffset: 450;
     }
 
-    .circleph{
-        fill: none;
-        stroke: url(#GradientColor);
-        stroke-width: 18px;
-        stroke-dasharray: 450;
-        stroke-dashoffset: 450;
-    }
-
     .circlec{
         fill: none;
         stroke: url(#GradientColor);
@@ -424,14 +396,6 @@ observer.observe(document.querySelector('.languages'));
         stroke-dashoffset: 450;
     }
 
-    .circlek{
-        fill: none;
-        stroke: url(#GradientColor);
-        stroke-width: 18px;
-        stroke-dasharray: 450;
-        stroke-dashoffset: 450;
-    }
-
     .circlej{
         fill: none;
         stroke: url(#GradientColor);
@@ -450,10 +414,6 @@ observer.observe(document.querySelector('.languages'));
 
     .animjs {
         animation: animjs 1s linear forwards;
-    }
-
-    .animph {
-        animation: animph 1s linear forwards;
     }
 
     .animc {
@@ -478,10 +438,6 @@ observer.observe(document.querySelector('.languages'));
 
     .animgh {
         animation: animgh 1s linear forwards;
-    }
-
-    .animk {
-        animation: animk 1s linear forwards;
     }
 
     .animj {
