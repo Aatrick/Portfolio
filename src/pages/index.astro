@@ -29,12 +29,12 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero" style="min-height: 100vh; overflow: hidden;">
 				<Hero
-				title='Salut ! 👋'
-				title2='Je suis Aatricks'
+				title='Hi ! 👋'
+				title2="I'm Emilio"
 				align="start">
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Développeur</Pill>
-						<Pill><img width="20" height="20" src="/Portfolio/assets/engineer.webp"/>Ingénieur</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
+						<Pill><img width="20" height="20" src="/Portfolio/assets/engineer.webp"/>Engineer</Pill>
 					</div>
 					<div class="w-full flex flex-row justify-center pt-30">
 						<div class="animate-bounce bg-white dark:bg-slate-800 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
@@ -48,7 +48,7 @@ const projects = (await getCollection('work'))
 				<script>
 					window.onload = function() {
 				    var typed = new Typed('#typed', {
-				      strings: ['Developpeur de <strong>passion</strong>', 'Developpeur de <strong>travail</strong>', "<strong>Ingenieur Polytech'</strong>"],
+				      strings: ['Developing as a <strong>hobby</strong>', 'Developing as a <strong>job</strong>', "<strong>Polytech' Engineer</strong>"],
 				      typeSpeed: 50,
 				      backSpeed: 30,
 				      loop: true,
@@ -70,23 +70,23 @@ const projects = (await getCollection('work'))
 			</div>
 			<div class="langues-header">
 				<Icon icon="translate" color="var(--accent-regular)" size="2.5rem" gradient />
-				<h3>Langues :</h3>
+				<h3>Languages :</h3>
 			</div>
 			<Langues/>
 			<div class="langues-header">
 				<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
-				<h3>Languages :</h3>
+				<h3>Programming languages :</h3>
 			</div>
 			<Languages/>
 			<div class="langues-header">
 				<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
-				<h3>Framework :</h3>
+				<h3>Frameworks :</h3>
 			</div>
 			<Framework/>
 			<main class="wrapper stack gap-20 lg:gap-48">
 				<section class="section with-background with-cta">
 					<header class="section-header stack gap-2 lg:gap-4">
-						<h3>Mes projets</h3>
+						<h3>My Projects</h3>
 					</header>
 					<div class="gallery">
 					
@@ -101,19 +101,16 @@ const projects = (await getCollection('work'))
 								<PortfolioPreview project={projects[2]} image="/Portfolio/assets/android-studio.webp" />
 							</li>
 							<li>
-								<PortfolioPreview project={projects[3]} image="/Portfolio/assets/Boubou.webp" />
+								<PortfolioPreview project={projects[3]} image="/Portfolio/assets/CChess.webp" />
 							</li>
 							<li>
 								<PortfolioPreview project={projects[4]} image="/Portfolio/assets/adb.webp" />
 							</li>
 							<li>
-								<PortfolioPreview project={projects[5]} image="/Portfolio/assets/spotify.webp" />
+								<PortfolioPreview project={projects[5]} image="/Portfolio/assets/dramaquick.webp" />
 							</li>
 							<li>
-								<PortfolioPreview project={projects[6]} image="/Portfolio/assets/dramaquick.webp" />
-							</li>
-							<li>
-								<PortfolioPreview project={projects[7]} image="/Portfolio/assets/julia3.webp" />
+								<PortfolioPreview project={projects[6]} image="/Portfolio/assets/julia3.webp" />
 							</li>
 							<li>
 								<a class="cd" href="https://github.com/Aatrick?tab=repositories" id="moreRepo">

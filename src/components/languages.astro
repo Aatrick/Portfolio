@@ -81,16 +81,6 @@
     });
 
     entries.forEach(entry => {
-        const circlegh = entry.target.querySelector('.circlegh');
-    
-        if (entry.isIntersecting) {
-        circlegh.classList.add('animgh');
-        return; 
-        }
-        circlegh.classList.remove('animgh');
-    });
-
-    entries.forEach(entry => {
         const circlej = entry.target.querySelector('.circlej');
     
         if (entry.isIntersecting) {
@@ -149,46 +139,6 @@ observer.observe(document.querySelector('.languages'));
             <div class="stack gap-2 lg:gap-4">
                 <div class="outer">
                     <div class="inner">
-                        <img id={`image-Rust`} src={"/Portfolio/assets/Rust.webp"} alt="Description" class="image">
-                    </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
-                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circler"/>
-                </svg>
-            </div>
-            <div class="stack gap-2 lg:gap-4">
-                <div class="outer">
-                    <div class="inner">
-                        <img id={`image-JavaScript`} src={"/Portfolio/assets/js.webp"} alt="Description" class="image">
-                    </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
-                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlejs"/>
-                </svg>
-            </div>
-            <div class="stack gap-2 lg:gap-4">
-                <div class="outer">
-                    <div class="inner">
-                        <img id={`image-C`} src={"/Portfolio/assets/c.webp"} alt="Description" class="image">
-                    </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
-                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlec"/>
-                </svg>
-            </div>
-            <div class="stack gap-2 lg:gap-4">
-                <div class="outer">
-                    <div class="inner">
-                        <img id={`image-TypeScript`} src={"/Portfolio/assets/ts.webp"} alt="Description" class="image">
-                    </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
-                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlets"/>
-                </svg>
-            </div>
-            <div class="stack gap-2 lg:gap-4">
-                <div class="outer">
-                    <div class="inner">
                         <img id={`image-HTML`} src={"/Portfolio/assets/html.webp"} alt="Description" class="image">
                     </div>
                 </div>
@@ -209,21 +159,21 @@ observer.observe(document.querySelector('.languages'));
             <div class="stack gap-2 lg:gap-4">
                 <div class="outer">
                     <div class="inner">
-                        <img id={`image-SQL`} src={"/Portfolio/assets/SQL.webp"} alt="Description" class="image">
+                        <img id={`image-C`} src={"/Portfolio/assets/C.webp"} alt="Description" class="image">
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
-                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlesql"/>
+                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlec"/>
                 </svg>
             </div>
             <div class="stack gap-2 lg:gap-4">
                 <div class="outer">
                     <div class="inner">
-                        <img id={`image-GitHub`} src={"/Portfolio/assets/github.webp"} alt="Description" class="image">
+                        <img id={`image-SQL`} src={"/Portfolio/assets/SQL.webp"} alt="Description" class="image">
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
-                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlegh"/>
+                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlesql"/>
                 </svg>
             </div>
             <div class="stack gap-2 lg:gap-4">
@@ -236,12 +186,42 @@ observer.observe(document.querySelector('.languages'));
                     <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlej"/>
                 </svg>
             </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-Cpp`} src={"/Portfolio/assets/cpp.webp"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
+                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlets"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-JavaScript`} src={"/Portfolio/assets/js.webp"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
+                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlejs"/>
+                </svg>
+            </div>
+            <div class="stack gap-2 lg:gap-4">
+                <div class="outer">
+                    <div class="inner">
+                        <img id={`image-Rust`} src={"/Portfolio/assets/Rust.webp"} alt="Description" class="image">
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
+                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circler"/>
+                </svg>
+            </div>
 </section>
 
 <style>
     .languages {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     margin-bottom: 40dvh;
     opacity: 0;
@@ -257,13 +237,13 @@ observer.observe(document.querySelector('.languages'));
 
 		.languages {
 			display: grid;
-			grid-template-columns: repeat(5, 2fr);
+			grid-template-columns: repeat(3, 2fr);
 			gap: 2rem;
 		}}
     
     @media (max-width: 1200px) {
         .languages {
-        grid-template-columns: repeat(5, 2fr);
+        grid-template-columns: repeat(3, 2fr);
         margin-bottom: 10dvh;
         }
     }
@@ -362,14 +342,6 @@ observer.observe(document.querySelector('.languages'));
         stroke-dashoffset: 450;
     }
 
-    .circlegh{
-        fill: none;
-        stroke: url(#GradientColor);
-        stroke-width: 18px;
-        stroke-dasharray: 450;
-        stroke-dashoffset: 450;
-    }
-
     .circlej{
         fill: none;
         stroke: url(#GradientColor);
@@ -410,10 +382,6 @@ observer.observe(document.querySelector('.languages'));
         animation: animsql 1s linear forwards;
     }
 
-    .animgh {
-        animation: animgh 1s linear forwards;
-    }
-
     .animj {
         animation: animj 1s linear forwards;
     }
@@ -427,7 +395,7 @@ observer.observe(document.querySelector('.languages'));
 
     @keyframes animr {
         100% {
-            stroke-dashoffset: 220;
+            stroke-dashoffset: 280;
         }
     }
 
@@ -436,22 +404,15 @@ observer.observe(document.querySelector('.languages'));
             stroke-dashoffset: 260;
         }
     }
-
-    @keyframes animph {
-        100% {
-            stroke-dashoffset: 210;
-        }
-    }
-
     @keyframes animc {
         100% {
-            stroke-dashoffset: 280;
+            stroke-dashoffset: 230;
         }
     }
 
     @keyframes animts {
         100% {
-            stroke-dashoffset: 380;
+            stroke-dashoffset: 260;
         }
     }
 
@@ -473,21 +434,9 @@ observer.observe(document.querySelector('.languages'));
         }
     }
 
-    @keyframes animgh {
-        100% {
-            stroke-dashoffset: 230;
-        }
-    }
-
-    @keyframes animk {
-        100% {
-            stroke-dashoffset: 300;
-        }
-    }
-
     @keyframes animj {
         100% {
-            stroke-dashoffset: 170;
+            stroke-dashoffset: 250;
         }
     }
 

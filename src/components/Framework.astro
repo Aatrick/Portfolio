@@ -10,16 +10,6 @@
     circlesv.classList.remove('animsv');
   });
 
-  entries.forEach(entry => {
-    const circlela = entry.target.querySelector('.circlela');
-
-    if (entry.isIntersecting) {
-      circlela.classList.add('animla');
-	  return; 
-    }
-    circlela.classList.remove('animla');
-  });
-
     entries.forEach(entry => {
         const circleas = entry.target.querySelector('.circleas');
     
@@ -109,16 +99,6 @@ observer.observe(document.querySelector('.framework'));
             <div class="stack gap-2 lg:gap-4">
                 <div class="outer">
                     <div class="inner">
-                        <img id={`image-laravel`} src="/Portfolio/assets/laravel.webp" alt="Description" class="image">
-                    </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="144px" height="144px">
-                    <circle cx="72" cy="72" r="63" stroke-linecap="round" class="circlela"/>
-                </svg>
-            </div>
-            <div class="stack gap-2 lg:gap-4">
-                <div class="outer">
-                    <div class="inner">
                         <img id={`image-TailWindCSS`} src="/Portfolio/assets/tailwindcss.webp" alt="Description" class="image">
                     </div>
                 </div>
@@ -142,7 +122,7 @@ observer.observe(document.querySelector('.framework'));
 <style>
     .framework {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: auto;
     margin-bottom: 100dvh;
     opacity: 0;
@@ -158,25 +138,25 @@ observer.observe(document.querySelector('.framework'));
 
 		.framework {
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			gap: 2rem;
 		}}
     
     @media (max-width: 1200px) {
         .framework {
-        grid-template-columns: repeat(4, 2fr);
+        grid-template-columns: repeat(3, 2fr);
         margin-bottom: 10dvh;
         }
     }
     @media (max-width: 1000px) {
         .framework {
-        grid-template-columns: repeat(3, 3fr);
+        grid-template-columns: repeat(2, 3fr);
         margin-bottom: 20dvh;
         }
     }
     @media (max-width: 800px) {
         .framework {
-        grid-template-columns: repeat(2, 4fr);
+        grid-template-columns: repeat(1, 4fr);
         margin-bottom: 30dvh;
         }
     }
@@ -219,14 +199,6 @@ observer.observe(document.querySelector('.framework'));
         stroke-dashoffset: 450;
     }
 
-    .circlela{
-        fill: none;
-        stroke: url(#GradientColor);
-        stroke-width: 18px;
-        stroke-dasharray: 450;
-        stroke-dashoffset: 450;
-    }
-
     .circleas{
         fill: none;
         stroke: url(#GradientColor);
@@ -255,10 +227,6 @@ observer.observe(document.querySelector('.framework'));
         animation: animsv 1s linear forwards;
     }
 
-    .animla{
-        animation: animla 1s linear forwards;
-    }
-
     .animas{
         animation: animas 1s linear forwards;
     }
@@ -274,12 +242,6 @@ observer.observe(document.querySelector('.framework'));
     @keyframes animsv{
         100%{
             stroke-dashoffset: 170;
-        }
-    }
-
-    @keyframes animla{
-        100%{
-            stroke-dashoffset: 310;
         }
     }
 
