@@ -17,6 +17,7 @@ import Languages from '../components/languages.astro';
 import Education from '../components/Education.astro';
 import Framework from '../components/Framework.astro';
 import Langues from '../components/Langues.astro';
+import Experiences from '../components/Experiences.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -67,6 +68,11 @@ const projects = (await getCollection('work'))
 			<br/>
 			<br/>
 			<Education/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<Experiences/>
 			</div>
 			<div class="langues-header">
 				<Icon icon="translate" color="var(--accent-regular)" size="2.5rem" gradient />
