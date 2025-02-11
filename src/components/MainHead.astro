@@ -33,9 +33,9 @@ const {
 		}
 		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 	};
-	const isDark = getThemePreference() === 'dark';
-	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
-
+	// const isDark = getThemePreference() === 'dark';
+	// document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
+	document.documentElement.classList.add('theme-dark');
 	if (typeof localStorage !== 'undefined') {
 		// Watch the document element and persist user preference when it changes.
 		const observer = new MutationObserver(() => {
