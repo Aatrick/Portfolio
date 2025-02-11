@@ -178,12 +178,25 @@ const projects = (await getCollection('work'))
     justify-content: center;
     align-items: center;
     min-height: 100dvh;
-	max-width: 100%;
+	width: 100%;
     gap: 2rem;
+	overflow-x: hidden;
+    padding: 0 1rem;
+	}
+
+	.wrapper {
+		width: 100%;
+		max-width: 83rem;
+		margin: 0 auto;
+		padding: 0 1rem;
+		box-sizing: border-box;
 	}
 
 	.gallery{
 		margin-top: 100px;
+		width: 100%;
+		max-width: 100%;
+		overflow-x: hidden;
 	}
 
 	.roles {
@@ -195,6 +208,7 @@ const projects = (await getCollection('work'))
 	@media (min-width: 50em) {
 		.hero {
 			display: grid;
+			padding: 0 2rem;
 		}
 	}
 
@@ -210,6 +224,8 @@ const projects = (await getCollection('work'))
 	.section {
 		display: grid;
 		gap: 2rem;
+		width: 100%;
+    	overflow-x: hidden;
 	}
 
 	.with-background {

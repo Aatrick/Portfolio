@@ -122,8 +122,11 @@ body {
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
-	overflow: auto;
-	max-width: 100;
+	width: 100;
+	position: relative;
+	overflow-x: hidden;
+	margin: 0;
+  	padding: 0;
 }
 
 body::-webkit-scrollbar {
